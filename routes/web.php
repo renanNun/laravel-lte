@@ -33,3 +33,8 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::put('/users/picture/{user}', [UserController::class, 'updatePicture'])->name('users.picture');
     Route::delete('/users/picture/{user}', [UserController::class, 'deletePicture'])->name('users.picture');
 });
+
+// Rotas hospedadas
+Route::get('/storageLink', function () {
+    Artisan::call('storage:link');
+});

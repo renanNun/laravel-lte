@@ -8,8 +8,8 @@
             <div class="card-body">
                 <div class="box-profile">
                     <form id="form-delete-picture" action="{{ route('users.picture', $user->id) }}" method="post">
-                    @csrf
-                    @method('delete')
+                        @csrf
+                        @method('delete')
                     </form>
                     <form id="form-update-picture" action="{{ route('users.picture', $user->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
